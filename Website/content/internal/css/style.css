@@ -59,7 +59,7 @@ footer > p {
 
 footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     /*column-gap: 500px;*/
     padding: 40px 0 0 0;
