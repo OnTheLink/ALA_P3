@@ -58,6 +58,12 @@ footer > p {
     text-align: center;
 }
 
+footer > h6 {
+    font-size: 0.8rem;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
 footer {
     display: flex;
     flex-direction: column;
