@@ -15,6 +15,7 @@ header {
     display: flex;
     padding-bottom: .5%;
     flex-direction: row;
+    background-color: lightgreen;
 }
 
 header > a {
@@ -38,10 +39,11 @@ header > article > img {
 
 a {
 	text-decoration: none;
-	/*color: white;*/
     color: black;
-    font-size: 2.5rem;
-    margin-left: 200px;
+    font-size: larger;
+    margin-left: 50px;
+    position: relative;
+    right: 50px;
 }
 
 a:hover {
