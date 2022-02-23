@@ -15,7 +15,7 @@ header {
     display: flex;
     padding-bottom: .5%;
     flex-direction: row;
-    background-color: lightgreen;
+    background-color: #8a0060;
 }
 
 header > a {
@@ -44,10 +44,11 @@ a {
     margin-left: 50px;
     position: relative;
     right: 50px;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 a:hover {
-	color: #8a0060;
+	color: purple;
 }
 
 section > article > p {
@@ -69,9 +70,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Balsamiq Sans', cursive;
     /*column-gap: 500px;*/
     padding: 40px 0 0 0;
-    background-color: lightgreen;
+    background-color: #8a0060;
     text-align: center;
     align-items: center;
     justify-content: center;
