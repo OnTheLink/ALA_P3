@@ -1,17 +1,9 @@
-Vragen:
-Wat voor functie’s moet de website hebben?
-Hoeveel pagina’s moet de website hebben?
-Wat voor doelgroep moet de website hebben?
-Heeft u nog een specifieke design/stijl voor de website?
-Wilt u uw logo op de website?
-En waar wilt u heb plaatsen?
-
-Antwoorden:
-Pagina's in studiewijzer doornemen
-Home inhoud nader bepalen (tekst en indeling zelf)
-Je hebt verschillend soort pagina's met ieder een eigen soort doelbasis, eenvoudig, complex en omrekensommen
-Over ons/ contact: Foto met naam en email (+tel?)
-Improv voor overige pagina's
-Vertel over berekeningen die we hebben gemaakt om de berekening on site te maken.
-Vertellen waar je trots over wasDoelgroep: Leerlingen en Docenten (Simpel voor de docent, mooi en leuk voor de student (afbeeldingen breuken etc))
-Logo: Vrij om te designen (Moet iets met rekenen te maken hebben)
+Wij hebben onlangs een gesprek gehad met onze klant over hoe en wat hij verzocht voor zijn reken website voor studenten en docenten.
+Het thema van de website mag van alles zijn zolang het simpel/ effectief en tegelijkerteid er goed en modern uitziet voor de student.
+Er komen verschillende soorten pagina's waaronder elke een eigen soort rekenmethode gebruikt, denk hierbij aan de doelbasis/ eenvoudig/ complex en omrekensommen.
+De home inhoud mag later bepaald worden en zo houdt dit dus de tekst en indeling in.
+Improvisatie voor overige pagina's is toegestaan zolang het binnen het kader van de website past en beschikt over hetzelfde soort design.
+Er moet een Over ons/ contact pagina komen met daarin een foto met naam en email + eventueel een telefoonnummer vermeldt staan.
+Meerdere ontwikkelaren maken hun eigen berekeningsoort zodat er voor elke berekening een optie is.
+De doelgroep zijn zowel Studenten als Docenten dus hou het kort maar krachtig met eventueel afbeeldingen van de verschillende berekeningen ter verduidelijking waar ze voor zijn.
+Het logo zijn wij vrij over om te designen met als voorwaarde dat het met rekenen te maken moet hebben.
