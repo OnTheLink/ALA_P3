@@ -41,3 +41,48 @@ function calcTimes() {
 }
 
 document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
+
+function calcExpo() {
+    let inputExpoOne = document.getElementById('inputExpoOne').value;
+    let inputExpoTwo = document.getElementById('inputExpoTwo').value;
+    let inputOne = parseFloat(inputExpoOne);
+    let inputTwo = parseFloat(inputExpoTwo);
+    let antwoordExpo = inputOne ** inputTwo;
+    document.getElementById('antwoordExpo').innerHTML = antwoordExpo;
+}
+
+document.getElementById('calcExpoBtn').addEventListener("click", calcExpo);
+
+function calcPercent() {
+    let inputPercentOne = document.getElementById('inputPercentOne').value;
+    let inputPercentTwo = document.getElementById('inputPercentTwo').value;
+    let inputOne = parseFloat(inputPercentOne);
+    let inputTwo = parseFloat(inputPercentTwo);
+    let antwoordPercent = inputOne / 100 * inputTwo;
+    document.getElementById('antwoordPercent').innerHTML = antwoordPercent;
+}
+
+document.getElementById('calcPercentBtn').addEventListener("click", calcPercent);
+
+function calcRest() {
+    let inputRestOne = document.getElementById('inputRestOne').value;
+    let inputRestTwo = document.getElementById('inputRestTwo').value;
+    let inputOne = parseFloat(inputRestOne);
+    let inputTwo = parseFloat(inputRestTwo);
+    let antwoordRest = inputOne % inputTwo;
+    document.getElementById('antwoordRest').innerHTML = antwoordRest;
+}
+
+document.getElementById('calcRestBtn').addEventListener("click", calcRest);
+
+function calcOdd() {
+    let inputOddOne = document.getElementById('inputOddOne').value;
+    let inputOne = parseFloat(inputOddOne);
+    if(inputOne % 2 == 0) {
+        document.getElementById('antwoordOdd').innerHTML = "Even";
+    }else{
+        document.getElementById('antwoordOdd').innerHTML = "Odd";
+    }
+}
+
+document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
