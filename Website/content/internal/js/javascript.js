@@ -19,3 +19,25 @@ function calcMin() {
 }
 
 document.getElementById('calcMinBtn').addEventListener("click", calcMin);
+
+function calcDivide() {
+    let inputDivideOne = document.getElementById('inputDivideOne').value;
+    let inputDivideTwo = document.getElementById('inputDivideTwo').value;
+    let inputOne = parseFloat(inputDivideOne);
+    let inputTwo = parseFloat(inputDivideTwo);
+    let antwoordDivide = inputOne / inputTwo;
+    document.getElementById('antwoordDivide').innerHTML = antwoordDivide;
+}
+
+document.getElementById('calcDivideBtn').addEventListener("click", calcDivide);
+
+function calcTimes() {
+    let inputTimesOne = document.getElementById('inputTimesOne').value;
+    let inputTimesTwo = document.getElementById('inputTimesTwo').value;
+    let inputOne = parseFloat(inputTimesOne);
+    let inputTwo = parseFloat(inputTimesTwo);
+    let antwoordTimes = inputOne * inputTwo;
+    document.getElementById('antwoordTimes').innerHTML = antwoordTimes;
+}
+
+document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
