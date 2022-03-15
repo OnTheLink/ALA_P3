@@ -1,3 +1,8 @@
+  ////////////////
+ // CALC BEGIN //
+////////////////
+
+// Plus
 function calcPlus() {
     let inputPlusOne = document.getElementById('inputPlusOne').value;
     let inputPlusTwo = document.getElementById('inputPlusTwo').value;
@@ -9,6 +14,7 @@ function calcPlus() {
 
 document.getElementById('calcPlusBtn').addEventListener("click", calcPlus);
 
+// Min
 function calcMin() {
     let inputMinOne = document.getElementById('inputMinOne').value;
     let inputMinTwo = document.getElementById('inputMinTwo').value;
@@ -20,6 +26,7 @@ function calcMin() {
 
 document.getElementById('calcMinBtn').addEventListener("click", calcMin);
 
+// Divide
 function calcDivide() {
     let inputDivideOne = document.getElementById('inputDivideOne').value;
     let inputDivideTwo = document.getElementById('inputDivideTwo').value;
@@ -31,6 +38,7 @@ function calcDivide() {
 
 document.getElementById('calcDivideBtn').addEventListener("click", calcDivide);
 
+// Multiply
 function calcTimes() {
     let inputTimesOne = document.getElementById('inputTimesOne').value;
     let inputTimesTwo = document.getElementById('inputTimesTwo').value;
@@ -42,6 +50,7 @@ function calcTimes() {
 
 document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
 
+// Exponential
 function calcExpo() {
     let inputExpoOne = document.getElementById('inputExpoOne').value;
     let inputExpoTwo = document.getElementById('inputExpoTwo').value;
@@ -53,6 +62,7 @@ function calcExpo() {
 
 document.getElementById('calcExpoBtn').addEventListener("click", calcExpo);
 
+// Percentage
 function calcPercent() {
     let inputPercentOne = document.getElementById('inputPercentOne').value;
     let inputPercentTwo = document.getElementById('inputPercentTwo').value;
@@ -64,6 +74,7 @@ function calcPercent() {
 
 document.getElementById('calcPercentBtn').addEventListener("click", calcPercent);
 
+// Rest
 function calcRest() {
     let inputRestOne = document.getElementById('inputRestOne').value;
     let inputRestTwo = document.getElementById('inputRestTwo').value;
@@ -75,6 +86,7 @@ function calcRest() {
 
 document.getElementById('calcRestBtn').addEventListener("click", calcRest);
 
+// Even or Odd
 function calcOdd() {
     let inputOddOne = document.getElementById('inputOddOne').value;
     let inputOne = parseFloat(inputOddOne);
@@ -86,3 +98,7 @@ function calcOdd() {
 }
 
 document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
+
+  //////////////
+ // CALC END //
+//////////////
