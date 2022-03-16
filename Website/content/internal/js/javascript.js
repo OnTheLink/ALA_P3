@@ -142,6 +142,37 @@ function setPowers() {
 
 document.getElementById('SetPowersBtn').addEventListener("click", setPowers);
 
+// Fractions
+function setFractions() {
+    let inputFractionsOne = document.getElementById('inputFractionsOne').value;
+    let inputBase = parseFloat(inputFractionsOne);
+    document.getElementById('antwoordFractions').innerHTML = "<br>";
+
+    let counter = 1;
+    while(counter <= inputBase){
+        document.getElementById('antwoordFractions').innerHTML += "1 / " + counter + "= " + 1 / counter + "<br>";
+        counter++;
+    }
+}
+
+document.getElementById('SetFractionsBtn').addEventListener("click", setFractions);
+
+// Squares
+function setSquares() {
+    let inputSquaresOne = document.getElementById('inputSquaresOne').value;
+    let inputBase = parseFloat(inputSquaresOne);
+    document.getElementById('antwoordSquares').innerHTML = "<br>";
+
+    let counter = 1;
+    while(counter <= inputBase){
+        document.getElementById('antwoordSquares').innerHTML += counter + "² = " + Math.pow(counter, 2) + "<br>";
+        counter++;
+    }
+    console.log(counter);
+}
+
+document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
+
   ////////////////////
  // SIMPLE SET END //
 ////////////////////
