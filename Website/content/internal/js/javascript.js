@@ -109,7 +109,7 @@ document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
 //////////////////////
 
 // Tables
-function SetTable() {
+function setTable() {
     let inputTableOne = document.getElementById('inputTableOne').value;
     let inputTableTwo = document.getElementById('inputTableTwo').value;
     let inputOne = parseFloat(inputTableOne);
@@ -120,11 +120,27 @@ function SetTable() {
     while(counter <= inputOne){
         document.getElementById('antwoordTable').innerHTML += counter * inputTwo + " ";
         counter++;
-        console.log(counter);
     }
 }
 
-document.getElementById('SetTableBtn').addEventListener("click", SetTable);
+document.getElementById('SetTableBtn').addEventListener("click", setTable);
+
+// Powers
+function setPowers() {
+    let inputPowersOne = document.getElementById('inputPowersOne').value;
+    let inputPowersTwo = document.getElementById('inputPowersTwo').value;
+    let inputBase = parseFloat(inputPowersOne);
+    let inputExpo = parseFloat(inputPowersTwo);
+    document.getElementById('antwoordPowers').innerHTML = "";
+
+    let counter = 0;
+    while(counter <= inputExpo){
+        document.getElementById('antwoordPowers').innerHTML += Math.pow(inputBase, counter) + " ";
+        counter++;
+    }
+}
+
+document.getElementById('SetPowersBtn').addEventListener("click", setPowers);
 
   ////////////////////
  // SIMPLE SET END //
