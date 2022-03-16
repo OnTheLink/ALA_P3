@@ -109,16 +109,22 @@ document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
 //////////////////////
 
 // Tables
-function calcTimes() {
-    let inputTimesOne = document.getElementById('inputTimesOne').value;
-    let inputTimesTwo = document.getElementById('inputTimesTwo').value;
-    let inputOne = parseFloat(inputTimesOne);
-    let inputTwo = parseFloat(inputTimesTwo);
-    let antwoordTimes = inputOne * inputTwo;
-    document.getElementById('antwoordTimes').innerHTML = antwoordTimes;
+function SetTable() {
+    let inputTableOne = document.getElementById('inputTableOne').value;
+    let inputTableTwo = document.getElementById('inputTableTwo').value;
+    let inputOne = parseFloat(inputTableOne);
+    let inputTwo = parseFloat(inputTableTwo);
+    document.getElementById('antwoordTable').innerHTML = "";
+
+    let counter = 0;
+    while(counter <= inputOne){
+        document.getElementById('antwoordTable').innerHTML += counter * inputTwo + " ";
+        counter++;
+        console.log(counter);
+    }
 }
 
-document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
+document.getElementById('SetTableBtn').addEventListener("click", SetTable);
 
   ////////////////////
  // SIMPLE SET END //
