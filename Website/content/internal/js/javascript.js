@@ -168,7 +168,6 @@ function setSquares() {
         document.getElementById('antwoordSquares').innerHTML += counter + "² = " + Math.pow(counter, 2) + "<br>";
         counter++;
     }
-    console.log(counter);
 }
 
 document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
@@ -181,7 +180,23 @@ document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
   ///////////////////////
  // COMPLEX SET BEGIN //
 ///////////////////////
+function setFibbonaci() {
+    let inputFibbonaciOne = document.getElementById('inputFibbonaciOne').value;
+    let inputBase = parseFloat(inputFibbonaciOne);
+    let number1 = 0;
+    let number2 = 1;
+    let anwserNumber;
+    document.getElementById('antwoordFibbonaci').innerHTML = "<br>";
 
+    while(anwserNumber <= inputBase){
+        let number1 = number2;
+        let number2 = anwserNumber;
+        let anwserNumber= number1 + number2;
+    }
+    document.getElementById('antwoordFibbonaci').innerHTML = anwserNumber;
+}
+
+document.getElementById('SetFibbonaciBtn').addEventListener("click", setFibbonaci);
 
 
   /////////////////////
