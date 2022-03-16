@@ -109,16 +109,69 @@ document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
 //////////////////////
 
 // Tables
-function calcTimes() {
-    let inputTimesOne = document.getElementById('inputTimesOne').value;
-    let inputTimesTwo = document.getElementById('inputTimesTwo').value;
-    let inputOne = parseFloat(inputTimesOne);
-    let inputTwo = parseFloat(inputTimesTwo);
-    let antwoordTimes = inputOne * inputTwo;
-    document.getElementById('antwoordTimes').innerHTML = antwoordTimes;
+function setTable() {
+    let inputTableOne = document.getElementById('inputTableOne').value;
+    let inputTableTwo = document.getElementById('inputTableTwo').value;
+    let inputOne = parseFloat(inputTableOne);
+    let inputTwo = parseFloat(inputTableTwo);
+    document.getElementById('antwoordTable').innerHTML = "";
+
+    let counter = 0;
+    while(counter <= inputOne){
+        document.getElementById('antwoordTable').innerHTML += counter * inputTwo + " ";
+        counter++;
+    }
 }
 
-document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
+document.getElementById('SetTableBtn').addEventListener("click", setTable);
+
+// Powers
+function setPowers() {
+    let inputPowersOne = document.getElementById('inputPowersOne').value;
+    let inputPowersTwo = document.getElementById('inputPowersTwo').value;
+    let inputBase = parseFloat(inputPowersOne);
+    let inputExpo = parseFloat(inputPowersTwo);
+    document.getElementById('antwoordPowers').innerHTML = "";
+
+    let counter = 0;
+    while(counter <= inputExpo){
+        document.getElementById('antwoordPowers').innerHTML += Math.pow(inputBase, counter) + " ";
+        counter++;
+    }
+}
+
+document.getElementById('SetPowersBtn').addEventListener("click", setPowers);
+
+// Fractions
+function setFractions() {
+    let inputFractionsOne = document.getElementById('inputFractionsOne').value;
+    let inputBase = parseFloat(inputFractionsOne);
+    document.getElementById('antwoordFractions').innerHTML = "<br>";
+
+    let counter = 1;
+    while(counter <= inputBase){
+        document.getElementById('antwoordFractions').innerHTML += "1 / " + counter + "= " + 1 / counter + "<br>";
+        counter++;
+    }
+}
+
+document.getElementById('SetFractionsBtn').addEventListener("click", setFractions);
+
+// Squares
+function setSquares() {
+    let inputSquaresOne = document.getElementById('inputSquaresOne').value;
+    let inputBase = parseFloat(inputSquaresOne);
+    document.getElementById('antwoordSquares').innerHTML = "<br>";
+
+    let counter = 1;
+    while(counter <= inputBase){
+        document.getElementById('antwoordSquares').innerHTML += counter + "² = " + Math.pow(counter, 2) + "<br>";
+        counter++;
+    }
+    console.log(counter);
+}
+
+document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
 
   ////////////////////
  // SIMPLE SET END //
