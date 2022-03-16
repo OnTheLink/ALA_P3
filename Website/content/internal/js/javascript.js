@@ -1,6 +1,6 @@
-  ////////////////
- // CALC BEGIN //
-////////////////
+  ///////////////////////
+ // SIMPLE CALC BEGIN //
+///////////////////////
 
 // Plus
 function calcPlus() {
@@ -99,6 +99,28 @@ function calcOdd() {
 
 document.getElementById('calcOddBtn').addEventListener("click", calcOdd);
 
-  //////////////
- // CALC END //
-//////////////
+  /////////////////////
+ // SIMPLE CALC END //
+/////////////////////
+
+
+  //////////////////////
+ // SIMPLE SET BEGIN //
+//////////////////////
+
+// Tables
+function calcTimes() {
+    let inputTimesOne = document.getElementById('inputTimesOne').value;
+    let inputTimesTwo = document.getElementById('inputTimesTwo').value;
+    let inputOne = parseFloat(inputTimesOne);
+    let inputTwo = parseFloat(inputTimesTwo);
+    let antwoordTimes = inputOne * inputTwo;
+    document.getElementById('antwoordTimes').innerHTML = antwoordTimes;
+}
+
+document.getElementById('calcTimesBtn').addEventListener("click", calcTimes);
+
+  ////////////////////
+ // SIMPLE SET END //
+////////////////////
+
