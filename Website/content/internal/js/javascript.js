@@ -232,6 +232,25 @@ function plexPrime(){
 
 document.getElementById('PlexPrimeBtn').addEventListener("click", plexPrime);
 
+// Collatz 
+function plexCollatz(){
+    let counter = 0;
+    let inputCollatzOne = document.getElementById('inputCollatzOne').value;
+    let inputBase = parseFloat(inputCollatzOne);
+    while (inputBase !== 1) {
+      if (inputBase % 2 === 0) {
+        inputBase = inputBase / 2
+      } else {
+        inputBase = inputBase * 3 + 1
+      }
+      counter++
+    }
+    console.log(counter);
+}
+
+document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz); 
+
+
   /////////////////////
  // COMPLEX SET END //
 /////////////////////
