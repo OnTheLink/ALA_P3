@@ -232,6 +232,7 @@ function plexPrime(){
 
 document.getElementById('PlexPrimeBtn').addEventListener("click", plexPrime);
 
+
 // Collatz 
 function plexCollatz(){
     let inputCollatzOne = document.getElementById('inputCollatzOne').value;
@@ -253,7 +254,10 @@ function plexCollatz(){
     }
 }
 
-document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz); 
+document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz);
+
+
+// Perfect number
 
 
   /////////////////////
