@@ -180,24 +180,36 @@ document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
   ///////////////////////
  // COMPLEX SET BEGIN //
 ///////////////////////
-function setFibbonaci() {
-    let inputFibbonaciOne = document.getElementById('inputFibbonaciOne').value;
-    let inputBase = parseFloat(inputFibbonaciOne);
+
+// Fibonacci
+function setFibonacci() {
+    // program to generate fibonacci series up to a certain number
+
+    // take input from the user
+    let inputFibonacciOne = document.getElementById('inputFibonacciOne').value;
+    let inputBase = parseFloat(inputFibonacciOne);
     let number1 = 0;
     let number2 = 1;
     let anwserNumber;
-    document.getElementById('antwoordFibbonaci').innerHTML = "<br>";
 
-    while(anwserNumber <= inputBase){
-        let number1 = number2;
-        let number2 = anwserNumber;
-        let anwserNumber= number1 + number2;
+    document.getElementById('antwoordFibonacci').innerHTML = "<br>";
+    document.getElementById('antwoordFibonacci').innerHTML += number1 + "<br>";
+    document.getElementById('antwoordFibonacci').innerHTML += number2 + "<br>";
+
+    anwserNumber = number1 + number2;
+
+    while (anwserNumber <= inputBase) {
+
+        // print the next term
+        document.getElementById('antwoordFibonacci').innerHTML += anwserNumber + "<br>";
+
+        number1 = number2;
+        number2 = anwserNumber;
+        anwserNumber = number1 + number2;
     }
-    document.getElementById('antwoordFibbonaci').innerHTML = anwserNumber;
 }
 
-document.getElementById('SetFibbonaciBtn').addEventListener("click", setFibbonaci);
-
+document.getElementById('SetFibonacciBtn').addEventListener("click", setFibonacci);
 
   /////////////////////
  // COMPLEX SET END //
