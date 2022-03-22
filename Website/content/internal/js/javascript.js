@@ -182,10 +182,7 @@ document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
 ///////////////////////
 
 // Fibonacci
-function setFibonacci() {
-    // program to generate fibonacci series up to a certain number
-
-    // take input from the user
+function plexFibonacci() {
     let inputFibonacciOne = document.getElementById('inputFibonacciOne').value;
     let inputBase = parseFloat(inputFibonacciOne);
     let number1 = 0;
@@ -200,7 +197,6 @@ function setFibonacci() {
 
     while (anwserNumber <= inputBase) {
 
-        // print the next term
         document.getElementById('antwoordFibonacci').innerHTML += anwserNumber + "<br>";
 
         number1 = number2;
@@ -209,7 +205,32 @@ function setFibonacci() {
     }
 }
 
-document.getElementById('SetFibonacciBtn').addEventListener("click", setFibonacci);
+document.getElementById('PlexFibonacciBtn').addEventListener("click", plexFibonacci);
+
+
+// Prime
+function plexPrime(){
+    let inputPrimeOne = document.getElementById('inputPrimeOne').value;
+    let inputBase = parseFloat(inputPrimeOne);
+    document.getElementById('antwoordPrime').innerHTML = "<br>";
+
+    for (let i = 0; i <= inputBase; i++) {
+        let check = 0;
+
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                check = 1;
+                break;
+            }
+        }
+
+        if (i > 1 && check == 0) {
+            document.getElementById('antwoordPrime').innerHTML += i + "<br>";
+        }
+    }
+}
+
+document.getElementById('PlexPrimeBtn').addEventListener("click", plexPrime);
 
   /////////////////////
  // COMPLEX SET END //
