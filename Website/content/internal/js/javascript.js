@@ -234,18 +234,23 @@ document.getElementById('PlexPrimeBtn').addEventListener("click", plexPrime);
 
 // Collatz 
 function plexCollatz(){
-    let counter = 0;
     let inputCollatzOne = document.getElementById('inputCollatzOne').value;
     let inputBase = parseFloat(inputCollatzOne);
+    let oldInput;
+
+    document.getElementById('antwoordCollatz').innerHTML = "<br>";
+
     while (inputBase !== 1) {
       if (inputBase % 2 === 0) {
-        inputBase = inputBase / 2
+        oldInput = inputBase;
+        inputBase = inputBase / 2;
+        document.getElementById('antwoordCollatz').innerHTML += oldInput + " / 2 = " + inputBase + "<br>";
       } else {
-        inputBase = inputBase * 3 + 1
+        oldInput = inputBase;
+        inputBase = inputBase * 3 + 1;
+        document.getElementById('antwoordCollatz').innerHTML += oldInput + " * 3 + 1 = " + inputBase + "<br>";
       }
-      counter++
     }
-    console.log(counter);
 }
 
 document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz); 
