@@ -168,7 +168,6 @@ function setSquares() {
         document.getElementById('antwoordSquares').innerHTML += counter + "² = " + Math.pow(counter, 2) + "<br>";
         counter++;
     }
-    console.log(counter);
 }
 
 document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
@@ -182,6 +181,83 @@ document.getElementById('SetSquaresBtn').addEventListener("click", setSquares);
  // COMPLEX SET BEGIN //
 ///////////////////////
 
+// Fibonacci
+function plexFibonacci() {
+    let inputFibonacciOne = document.getElementById('inputFibonacciOne').value;
+    let inputBase = parseFloat(inputFibonacciOne);
+    let number1 = 0;
+    let number2 = 1;
+    let anwserNumber;
+
+    document.getElementById('antwoordFibonacci').innerHTML = "<br>";
+    document.getElementById('antwoordFibonacci').innerHTML += number1 + "<br>";
+    document.getElementById('antwoordFibonacci').innerHTML += number2 + "<br>";
+
+    anwserNumber = number1 + number2;
+
+    while (anwserNumber <= inputBase) {
+
+        document.getElementById('antwoordFibonacci').innerHTML += anwserNumber + "<br>";
+
+        number1 = number2;
+        number2 = anwserNumber;
+        anwserNumber = number1 + number2;
+    }
+}
+
+document.getElementById('PlexFibonacciBtn').addEventListener("click", plexFibonacci);
+
+
+// Prime
+function plexPrime(){
+    let inputPrimeOne = document.getElementById('inputPrimeOne').value;
+    let inputBase = parseFloat(inputPrimeOne);
+    document.getElementById('antwoordPrime').innerHTML = "<br>";
+
+    for (let i = 0; i <= inputBase; i++) {
+        let check = 0;
+
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                check = 1;
+                break;
+            }
+        }
+
+        if (i > 1 && check == 0) {
+            document.getElementById('antwoordPrime').innerHTML += i + "<br>";
+        }
+    }
+}
+
+document.getElementById('PlexPrimeBtn').addEventListener("click", plexPrime);
+
+
+// Collatz 
+function plexCollatz(){
+    let inputCollatzOne = document.getElementById('inputCollatzOne').value;
+    let inputBase = parseFloat(inputCollatzOne);
+    let oldInput;
+
+    document.getElementById('antwoordCollatz').innerHTML = "<br>";
+
+    while (inputBase !== 1) {
+      if (inputBase % 2 === 0) {
+        oldInput = inputBase;
+        inputBase = inputBase / 2;
+        document.getElementById('antwoordCollatz').innerHTML += oldInput + " / 2 = " + inputBase + "<br>";
+      } else {
+        oldInput = inputBase;
+        inputBase = inputBase * 3 + 1;
+        document.getElementById('antwoordCollatz').innerHTML += oldInput + " * 3 + 1 = " + inputBase + "<br>";
+      }
+    }
+}
+
+document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz);
+
+
+// Perfect number
 
 
   /////////////////////
