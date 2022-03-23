@@ -307,14 +307,38 @@ function plexPerfect(){
 
 document.getElementById('PlexPerfectBtn').addEventListener("click", plexPerfect);
 
-
-// 28 / 2 = 14
-// 14 / 2 = 7
-// 7 / 2 = 4
-// 4 / 2 = 2
-// 2 / 2 = 1
-// 1 + 2 + 4 + 7 + 14 = 28
-
   /////////////////////
  // COMPLEX SET END //
+/////////////////////
+
+
+  ///////////////////////
+ // UMREIKENUNG BEGIN //
+///////////////////////
+
+function umDecimal(){
+    // Number Input
+    let inputDeciOne = document.getElementById('inputDeciOne').value;
+    let input = parseFloat(inputDeciOne);
+    let conversion;
+
+    document.getElementById('antwoordDeci').innerHTML = "<br>";
+
+    // Dropdown
+    let dropDeciOne = document.getElementById('dropDeciOne');
+    let inputConv = dropDeciOne.options[dropDeciOne.selectedIndex].value;
+
+    if(inputConv == "binary"){
+        conversion = input.toString(2);
+        document.getElementById('antwoordDeci').innerHTML += "Binary: " + conversion;
+    }else if(inputConv == "decimal"){
+        conversion = parseInt(input, 2);
+        document.getElementById('antwoordDeci').innerHTML += "Decimal: " + conversion;
+    }
+}
+
+document.getElementById('umDeciBtn').addEventListener("click", umDecimal);
+
+  /////////////////////
+ // UMREIKENUNG END //
 /////////////////////
