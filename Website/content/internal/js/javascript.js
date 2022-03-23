@@ -258,7 +258,62 @@ document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz)
 
 
 // Perfect number
+function plexPerfect(){
+    let inputPerfectOne = document.getElementById('inputPerfectOne').value;
+    let inputBase = parseFloat(inputPerfectOne);
+    let reachedEnd = false;
+    let newAnswer;
+    let answerArr = [];
+    let visualArr = [];
+    let finalAnswer = 0;
+    let check = inputBase;
 
+    document.getElementById('antwoordPerfect').innerHTML = "<br>";
+
+    do{
+        inputBase = Math.round(inputBase);
+        newAnswer = inputBase / 2;
+        newAnswer = Math.round(newAnswer);
+        document.getElementById('antwoordPerfect').innerHTML += inputBase + " / 2 = " + newAnswer + "<br>";
+        inputBase = newAnswer;
+
+        if(inputBase > 1){
+            answerArr.push(inputBase);
+            visualArr.push(inputBase, " + ");
+        }else{
+            answerArr.push(inputBase);
+            visualArr.push(inputBase);
+        }
+
+        if(inputBase == 1){
+            for (let i = 0; i < answerArr.length; i++) {
+                finalAnswer += answerArr[i];
+            }
+            document.getElementById('antwoordPerfect').innerHTML += visualArr.join(" ") + " = " + finalAnswer + "<br>";
+            console.log(check);
+            console.log(finalAnswer);
+            if(check == finalAnswer){
+                document.getElementById('antwoordPerfect').innerHTML += "Dit is een perfect getal" + "<br>";
+            }else{
+                document.getElementById('antwoordPerfect').innerHTML += "Dit is geen perfect getal" + "<br>";
+            }
+            reachedEnd = true;
+        }
+
+    } while(inputBase > 1);
+    
+    
+}
+
+document.getElementById('PlexPerfectBtn').addEventListener("click", plexPerfect);
+
+
+// 28 / 2 = 14
+// 14 / 2 = 7
+// 7 / 2 = 4
+// 4 / 2 = 2
+// 2 / 2 = 1
+// 1 + 2 + 4 + 7 + 14 = 28
 
   /////////////////////
  // COMPLEX SET END //
