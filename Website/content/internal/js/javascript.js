@@ -258,8 +258,87 @@ document.getElementById('PlexCollatzBtn').addEventListener("click", plexCollatz)
 
 
 // Perfect number
+function plexPerfect(){
+    let inputPerfectOne = document.getElementById('inputPerfectOne').value;
+    let inputBase = parseFloat(inputPerfectOne);
+    let reachedEnd = false;
+    let newAnswer;
+    let answerArr = [];
+    let visualArr = [];
+    let finalAnswer = 0;
+    let check = inputBase;
 
+    document.getElementById('antwoordPerfect').innerHTML = "<br>";
+
+    do{
+        inputBase = Math.round(inputBase);
+        newAnswer = inputBase / 2;
+        newAnswer = Math.round(newAnswer);
+        document.getElementById('antwoordPerfect').innerHTML += inputBase + " / 2 = " + newAnswer + "<br>";
+        inputBase = newAnswer;
+
+        if(inputBase > 1){
+            answerArr.push(inputBase);
+            visualArr.push(inputBase, " + ");
+        }else{
+            answerArr.push(inputBase);
+            visualArr.push(inputBase);
+        }
+
+        if(inputBase == 1){
+            for (let i = 0; i < answerArr.length; i++) {
+                finalAnswer += answerArr[i];
+            }
+            document.getElementById('antwoordPerfect').innerHTML += visualArr.join(" ") + " = " + finalAnswer + "<br>";
+            console.log(check);
+            console.log(finalAnswer);
+            if(check == finalAnswer){
+                document.getElementById('antwoordPerfect').innerHTML += "Dit is een perfect getal" + "<br>";
+            }else{
+                document.getElementById('antwoordPerfect').innerHTML += "Dit is geen perfect getal" + "<br>";
+            }
+            reachedEnd = true;
+        }
+
+    } while(inputBase > 1);
+    
+    
+}
+
+document.getElementById('PlexPerfectBtn').addEventListener("click", plexPerfect);
 
   /////////////////////
  // COMPLEX SET END //
+/////////////////////
+
+
+  ///////////////////////
+ // UMREIKENUNG BEGIN //
+///////////////////////
+
+function umDecimal(){
+    // Number Input
+    let inputDeciOne = document.getElementById('inputDeciOne').value;
+    let input = parseFloat(inputDeciOne);
+    let conversion;
+
+    document.getElementById('antwoordDeci').innerHTML = "<br>";
+
+    // Dropdown
+    let dropDeciOne = document.getElementById('dropDeciOne');
+    let inputConv = dropDeciOne.options[dropDeciOne.selectedIndex].value;
+
+    if(inputConv == "binary"){
+        conversion = input.toString(2);
+        document.getElementById('antwoordDeci').innerHTML += "Binary: " + conversion;
+    }else if(inputConv == "decimal"){
+        conversion = parseInt(input, 2);
+        document.getElementById('antwoordDeci').innerHTML += "Decimal: " + conversion;
+    }
+}
+
+document.getElementById('umDeciBtn').addEventListener("click", umDecimal);
+
+  /////////////////////
+ // UMREIKENUNG END //
 /////////////////////
