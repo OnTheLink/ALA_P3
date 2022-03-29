@@ -319,7 +319,9 @@ document.getElementById('PlexPerfectBtn').addEventListener("click", plexPerfect)
 function umDecimal(){
     // Number Input
     let inputDeciOne = document.getElementById('inputDeciOne').value;
+    let inputDeciTwo = document.getElementById('inputDeciTwo').value;
     let input = parseFloat(inputDeciOne);
+    let inputTwo = parseFloat(inputDeciTwo);
     let conversion;
 
     document.getElementById('antwoordDeci').innerHTML = "<br>";
