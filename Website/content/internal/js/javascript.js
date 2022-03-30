@@ -339,6 +339,57 @@ function umDecimal(){
 
 document.getElementById('umDeciBtn').addEventListener("click", umDecimal);
 
+
+function umFactorizer(){
+    let inputBase = document.getElementById('inputFactoOne').value;
+    let input = parseFloat(inputBase);
+    let aPrime = [];
+    let aFinal = [];
+    let wipAnswer = 0;
+    let finalAnswer = 0;
+    let done;
+
+    for (let i = 0; i <= input; i++) {
+        let check = 0;
+
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                check = 1;
+                break;
+            }
+        }
+
+        if (i > 1 && check == 0) {
+            aPrime.push(i);
+        }
+    }
+
+    while(done != true){
+        if(input == Math.round(input)){
+            wipAnswer = input / 2
+            aFinal.push(2);
+        }else{
+            wipAnswer = input / aPrime[0];
+            aFinal.push(aPrime[0]);
+            aPrime.shift();
+        }
+        if(wipAnswer == 1){
+            done == true;
+            for(var i = 0; i < aFinal.length; i++) {
+                if(finalAnswer != input){
+                    multiplyFactor = aFinal[i] + 1;
+                    finalAnswer = aFinal[i] * multiplyFactor;
+                }
+            }
+            document.getElementById('antwoordFacto').innerHTML += visualArr.join(" * ") + " = " + finalAnswer + "<br>";
+        }
+    }
+}
+
+document.getElementById('umFactoBtn').addEventListener("click", umFactorizer);
+
+// Heel getal gedeeld door 2
+// Geen heel getal gedeeld door volgend priemgetal
   /////////////////////
  // UMREIKENUNG END //
 /////////////////////
