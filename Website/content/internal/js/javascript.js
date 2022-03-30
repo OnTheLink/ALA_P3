@@ -319,16 +319,14 @@ document.getElementById('PlexPerfectBtn').addEventListener("click", plexPerfect)
 function umDecimal(){
     // Number Input
     let inputDeciOne = document.getElementById('inputDeciOne').value;
-    let inputDeciTwo = document.getElementById('inputDeciTwo').value;
     let input = parseFloat(inputDeciOne);
-    let inputTwo = parseFloat(inputDeciTwo);
     let conversion;
 
     document.getElementById('antwoordDeci').innerHTML = "<br>";
 
     // Dropdown
-    let dropDeciOne = document.getElementById('dropDeciOne');
-    let inputConv = dropDeciOne.options[dropDeciOne.selectedIndex].value;
+    let dropDeciTwo = document.getElementById('dropDeciTwo');
+    let inputConv = dropDeciTwo.options[dropDeciTwo.selectedIndex].value;
 
     if(inputConv == "binary"){
         conversion = input.toString(2);
