@@ -347,7 +347,22 @@ function umFactorizer(){
     let aFinal = [];
     let wipAnswer = 0;
     let finalAnswer = 0;
-    let done;
+    let checkRound = 0;
+    let done = false;
+    document.getElementById('antwoordFacto').innerHTML = "<br>";
+
+    console.log("DEBUG LOGGER STARTED ON METHOD: umFactorizer");
+    console.log("Startup Configuration:");
+    console.log("InputBase: " + inputBase);
+    console.log("input: " + input);
+    console.log("aPrime: " + aPrime);
+    console.log("aFinal: " + aFinal);
+    console.log("wipAnswer: " + wipAnswer);
+    console.log("finalAnswer: " + finalAnswer);
+    console.log("done: " + done);
+    console.log("");
+    console.log("Executing function...");
+    console.log("Running PrimeMaker...");
 
     for (let i = 0; i <= input; i++) {
         let check = 0;
@@ -361,29 +376,72 @@ function umFactorizer(){
 
         if (i > 1 && check == 0) {
             aPrime.push(i);
+            // DEV DEBUGGER
+            console.log(i);
         }
     }
 
+    wipAnswer = input;
+
+    console.log(aPrime);
+    console.log("PrimeMaker Task Finished");
+    console.log("Running WhileLoop...");
+
+    // als priem getal geen heel getal geeft ga naar volgende priem getal
+
     while(done != true){
-        if(input == Math.round(input)){
-            wipAnswer = input / 2
+        if(input == Math.round(wipAnswer) && wipAnswer > 1){
+            console.log("Dividing by 2");
+            wipAnswer = wipAnswer / 2;
             aFinal.push(2);
+        }else if(wipAnswer > 1){
+            console.log("Dividing by prime number: " + aPrime[0]);
+            wipAnswer = wipAnswer / aPrime[0];
+            aFinal.push(aPrime[0]);
+            aPrime.shift();
+        }else if(wipAnswer < 1){
+            checkRound = aPrime[0] / wipAnswer;
+            if(checkRound != Math.round(checkRound)){
+                aPrime.shift();
+            }
         }else{
-            wipAnswer = input / aPrime[0];
             aFinal.push(aPrime[0]);
             aPrime.shift();
         }
+
+        if(wipAnswer != Math.round(wipAnswer) && wipAnswer < 1){
+            wipAnswer = 1;
+        }
+
+        console.log("Final Array:")
+        console.log(aFinal);
+        console.log("");
+        console.log("Current wipAnswer State:");
+        console.log(wipAnswer);
+        console.log("Current finalAnswer State:");
+        console.log(finalAnswer);
+        console.log("Going through for loop (Multiplying Final array with the next item each time...")
+
         if(wipAnswer == 1){
-            done == true;
+            done = true;
             for(var i = 0; i < aFinal.length; i++) {
                 if(finalAnswer != input){
                     multiplyFactor = aFinal[i] + 1;
                     finalAnswer = aFinal[i] * multiplyFactor;
+                    //DEV DEBUGGER
+                    console.log("multiplyFactor:");
+                    console.log(multiplyFactor);
+                    console.log("finalAnswer:");
+                    console.log(finalAnswer);
+                    console.log("NEXT");
+                    console.log(" ");
                 }
             }
-            document.getElementById('antwoordFacto').innerHTML += visualArr.join(" * ") + " = " + finalAnswer + "<br>";
+            console.log("Pushing final data to HTML...");
+            document.getElementById('antwoordFacto').innerHTML += aFinal.join(" * ") + " = " + finalAnswer + "<br>";
         }
     }
+    console.log("Execution Finished!");
 }
 
 document.getElementById('umFactoBtn').addEventListener("click", umFactorizer);
