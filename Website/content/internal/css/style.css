@@ -61,6 +61,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
 #drie p {
     font-family: 'Balsamiq Sans', cursive;
     text-align: center;
@@ -94,4 +98,9 @@ footer {
 #Een, #Twee, #Drie, #Vier, #Vijf, #Zes, #Zeven, #Acht {
     width: 100%;
     height: 100vh;
+}
+
+#een img {
+    width: 250px;
+    height: 250px;
 }
