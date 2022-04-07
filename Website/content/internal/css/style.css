@@ -14,16 +14,9 @@ body {
 header {
     /*background-color: black;*/
     display: flex;
-    padding-bottom: .5%;
-    flex-direction: row;
+    position: fixed;
+    width: 100vw;
     background-color: #7CC6FE;
-}
-
-header > a {
-    flex: 1;
-}
-
-header {
     align-items: center;
 }
 
@@ -78,15 +71,13 @@ footer > h6 {
 
 footer {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
     font-family: 'Balsamiq Sans', cursive;
-    /*column-gap: 500px;*/
     padding: 40px 0 0 0;
     background-color: #C884A6;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 #Een, #Twee, #Drie, #Vier, #Vijf, #Zes {
@@ -102,6 +93,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
+    align-items: center;
 }
 
 #Een p {
