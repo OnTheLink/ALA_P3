@@ -28,25 +28,36 @@
         </header>
         <main>
             <div id="Een">
-                <article id="simpel">
-                    <img src="/Website/content/media/pictures/simpelrekenen.png" alt="simpel">
-                    <p>Simpel Rekenen</p>
-                </article>
-                <article id="reeksen">
-                    <img src="/Website/content/media/pictures/reeksen.png" alt="reeksen">
-                    <p>Eenvoudige reeksen</p>
-                </article>
-                <article id="complex">
-                    <img src="/Website/content/media/pictures/complex.png" alt="complex">
-                    <p>Complex Rekenen</p>
-                </article>
+                <section id="flex-container">
+                    <a href="#Vier"><img src="/Website/content/media/pictures/simpel.png" alt="simpelrekenen"></a>
+                    <a href="#Vijf"><img src="/Website/content/media/pictures/Eenvoudige.png" alt="reeksen"></a>
+                    <a href="#Zes"><img src="/Website/content/media/pictures/complex.png" alt="complex"></a>
+                    <a href="#Zeven"><img src="/Website/content/media/pictures/Omrekenen.png" alt="omrekenen"></a>
+                </section>
             </div>
             <div id="Twee">
-                p
-            </div>
-            <div id="Drie">
                 <h1>Over ons</h1> <br>
                 <p>Wij Misha, Robin, Mateusz en Luuk hebben een rekenmachine gemaakt om mensen te helpen met moeilijke berekeningen. <br> Onze rekenmachine kan veel verschillende dingen zoals: Optellen, Vermenigvuldigen, Delen, Machtsverheffen, Percentage, Restwaarde, Even of oneven berekenen!</p>
+            </div>
+            <div id="Drie">
+                <h1>Contact</h1>
+                <div class="container">
+                    <form action="#">
+                  
+                      <label for="naam">Naam</label>
+                      <input type="text" id="fname" name="naam" placeholder="Geef hier je naam op!">
+                  
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" placeholder="Geef hier je email op!">
+                  
+                  
+                      <label for="bericht">Bericht</label>
+                      <textarea id="bericht" name="bericht" placeholder="Schrijf hier een berciht naar ons!" style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Verstuur">
+                  
+                    </form>
+                  </div>
             </div>
             <div id="Vier">
                 <input id="inputPlusOne" type='number' value="0"> +
