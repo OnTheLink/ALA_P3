@@ -117,6 +117,7 @@ p {
 
 #flex-container > a:hover {
     border: 2px solid purple;
+    height: 250px;
 
 }
 
