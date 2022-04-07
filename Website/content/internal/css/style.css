@@ -121,7 +121,7 @@ p {
 
 }
 
-input[type=text], select, textarea {
+.container input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
@@ -130,27 +130,27 @@ input[type=text], select, textarea {
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical;
-  }
+}
   
   
-  input[type=submit] {
+.container  input[type=submit] {
     background-color: #7CC6FE;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
   
-  
-  input[type=submit]:hover {
+.container  input[type=submit]:hover {
     background-color: purple;
-  }
+}
   
-  .container {
+.container {
     border-radius: 5px;
     background-color: #CCD5FF;
     padding: 20px;
-  }
+}
+
 
 
