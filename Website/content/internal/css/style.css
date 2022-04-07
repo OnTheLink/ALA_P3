@@ -96,21 +96,11 @@ footer {
 
 #Een img {
     width: 250px;
-    gap: 10px 10px;
-    position: absolute;
-    left: 350px;
-    top: 350px;
-}
-
-#flex-container > a:hover {
-    border: 2px solid purple;
-    height: 250px;
-    justify-content: center;
 }
 
 #Een {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
 }
 
