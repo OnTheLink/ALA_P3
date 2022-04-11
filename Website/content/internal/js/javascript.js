@@ -485,11 +485,31 @@ function umRomanizer() {
         document.getElementById('antwoordRoman').innerHTML = roman;
     }
 }
+document.getElementById('umRomanBtn').addEventListener("click", umRomanizer);
 
 
   //morsenizer 
-            
-    
-
-document.getElementById('umRomanBtn').addEventListener("click", umRomanizer);
+    function umMorsenizer() {
+        let inputBase = document.getElementById('inputMorse').value;
+        let input = parseFloat(inputBase);
+        let mors = "";
+        document.getElementById('antwoordMorse').innerHTML = "";
+        const morsNumList = {1: ".-", 2: "-...", 3: "-.-.", 4: "-..", 5: ".", 6: "..-.", 7: "--.", 8: "....", 9: "..", 0: "-----", a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.", g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..", m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.", s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-", y: "-.--", z: "--.."};
+        let a;
+        if(input < 0 || input > 9999){
+            document.getElementById('antwoordMorse').innerHTML = "Voer een getal tussen de 0 en 9999 in...";
+        }else{
+            for(let key in morsNumList){
+                a = Math.floor(input / key);
+                if(a >= 0){
+                    for(let i = 0; i < a; i++){
+                        mors += morsNumList[key];
+                    }
+                }
+                input = input % key;
+            }
+            document.getElementById('antwoordMorse').innerHTML = mors;
+        }
+    }
+    document.getElementById('umMorseBtn').addEventListener("click", umMorsenizer);
 
