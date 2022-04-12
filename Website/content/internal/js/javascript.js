@@ -488,28 +488,98 @@ function umRomanizer() {
 document.getElementById('umRomanBtn').addEventListener("click", umRomanizer);
 
 
-  //morsenizer 
-    function umMorsenizer() {
-        let inputBase = document.getElementById('inputMorseOne').value;
-        let input = parseFloat(inputBase);
-        let mors = "";
-        document.getElementById('antwoordMorse').innerHTML = "";
-        const morsNumList = {1: ".-", 2: "-...", 3: "-.-.", 4: "-..", 5: ".", 6: "..-.", 7: "--.", 8: "....", 9: "..", 0: "-----", a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.", g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..", m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.", s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-", y: "-.--", z: "--.."};
-        let a;
-        if(input < 1 || input > 9999){
-            document.getElementById('antwoordMorse').innerHTML = "Voer een word of een getal in!";
-        }else{
-            for(let key in morsNumList){
-                a = Math.floor(input / morsNumList[key]);
-                if(a >= 0){
-                    for(let i = 0; i < a; i++){
-                        mors += key;
-                    }
-                }
-                input = input % morsNumList[key];
-            }
-            document.getElementById('antwoordMorse').innerHTML = mors;
+//morsenizer 
+function umMorsenizer(){
+    var letters = [
+        ' ',
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f',
+        'g',
+        'h',
+        'i',
+        'j',
+        'k',
+        'l',
+        'm',
+        'n',
+        'o',
+        'p',
+        'q',
+        'r',
+        's',
+        't',
+        'u',
+        'v',
+        'w',
+        'x',
+        'y',
+        'z',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '0'
+    ];
+    var morseLetters =[
+        '\xa0\xa0\xa0',
+        '.-',
+        '-...',
+        '-.-.',
+        '-..',
+        '.',
+        '..-.',
+        '--.',
+        '....',
+        '..',
+        '.---',
+        '-.-',
+        '.-..',
+        '--',
+        '-.',
+        '---',
+        '.--.',
+        '--.-',
+        '.-.',
+        '...',
+        '-',
+        '..-',
+        '...-',
+        '.--',
+        '-..-',
+        '-.--',
+        '--..',
+        '.----',
+        '..---',
+        '...--',
+        '....-',
+        '.....',
+        '-....',
+        '--...',
+        '---..',
+        '----.',
+        '-----',
+    ];
+    
+    var input = document.getElementById('inputMorseOne').value;
+    var morse = "";
+    for (var i = 0; i < input.length; i++) {
+        for (var j = 0; j < 37; j++) {
+            if (input[i].toLowerCase() == letters[j]) {
+                morse += morseLetters[j];
+                morse += " ";
+            }        
         }
     }
+    document.getElementById("antwoordMorse").innerHTML = morse;
+}
 document.getElementById('umMorseBtn').addEventListener("click", umMorsenizer);
 
