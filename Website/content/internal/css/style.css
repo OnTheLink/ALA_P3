@@ -99,7 +99,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 18vw;
 }
 
 #grid-container > a:hover {
