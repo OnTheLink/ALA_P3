@@ -91,17 +91,18 @@ footer {
 }
     
 
-#flex-container {
-    display: flex;
+#grid-container {
+    display: grid;
     height: 250px;
     width: 250px;
-    gap: 10px 10px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     position: absolute;
-    left: 400px;
-    top: 350px;
+    top: 35%;
+    left: 20%;
 }
 
-#flex-container > a:hover {
+#grid-container > a:hover {
     border: 2px solid purple;
     height: 250px;
 }
