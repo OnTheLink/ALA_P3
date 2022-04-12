@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#ausec{
+    margin-top: 10vh;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.foto {
+    height: 40vh;
+}
+ul{
+   list-style-type: none;
+}
