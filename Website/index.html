@@ -27,24 +27,20 @@
         </header>
         <main>
             <div id="Een">
-                <article id="simpel">
-                    <img src="content/media/pictures/simpel.png" alt="simpel">
-                    <p>Simpel Rekenen</p>
-                </article>
-                <article id="reeksen">
-                    <img src="content/media/pictures/Eenvoudige.png" alt="reeksen">
-                    <p>Eenvoudige reeksen</p>
-                </article>
-                <article id="complex">
-                    <img src="content/media/pictures/complex.png" alt="complex">
-                    <p>Complex Rekenen</p>
-                </article>
-                <article id="omrekenen">
-                    <img src="content/media/pictures/Omrekenen.png" alt="omrekenen">
-                    <p>Omrekenen</p>
-                </article>
+                <section id="flex-container">
+                    <a href="#Drie"><img src="/Website/content/media/pictures/simpel.png" alt="simpelrekenen"></a>
+                    <a href="#Vier"><img src="/Website/content/media/pictures/Eenvoudige.png" alt="reeksen"></a>
+                    <a href="#Vijf"><img src="/Website/content/media/pictures/complex.png" alt="complex"></a>
+                    <a href="#Zes"><img src="/Website/content/media/pictures/Omrekenen.png" alt="omrekenen"></a>
+                </section>
             </div>
             <div id="Twee">
+                p
+            </div>
+            <div>
+                <h1>Simpel Rekenen</h1>
+            </div>
+            <div id="Drie">
                 <input id="inputPlusOne" type='number' value="0"> +
                 <input id="inputPlusTwo" type='number' value="0">
                 <span id="antwoordPlus"></span>
@@ -92,7 +88,10 @@
                 <button id="calcOddBtn">Toon antwoord</button>
                 <br>
             </div>
-            <div id="Drie">
+            <div>
+                <h1>Simpele Sets</h1>
+            </div>
+            <div id="Vier">
                 <input id="inputTableOne" type='number' value="0"> *
                 <input id="inputTableTwo" type='number' value="0">
                 <span id="antwoordTable"></span>
@@ -115,7 +114,10 @@
                 <button id="SetSquaresBtn">Toon antwoord</button>
                 <br>
             </div>
-            <div id="Vier">
+            <div>
+                <h1>Complex Rekenen</h1>
+            </div>
+            <div id="Vijf">
                 <input id="inputFibonacciOne" type='number' value="0">Fibonacci getallen tot
                 <span id="antwoordFibonacci"></span>
                 <button id="PlexFibonacciBtn">Toon antwoord</button>
@@ -136,7 +138,10 @@
                 <button id="PlexPerfectBtn">Toon antwoord</button>
                 <br>
             </div>
-            <div id="Vijf">
+            <div>
+                <h1>Omrekenen</h1>
+            </div>
+            <div id="Zes">
                 <input id="inputDeciOne" type='number' value="0">
                 <select name="dropDeciOne_drop" id="dropDeciOne">
                     <option value="decimal">Decimal</option>
