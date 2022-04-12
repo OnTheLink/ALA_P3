@@ -497,7 +497,7 @@ document.getElementById('umRomanBtn').addEventListener("click", umRomanizer);
         const morsNumList = {1: ".-", 2: "-...", 3: "-.-.", 4: "-..", 5: ".", 6: "..-.", 7: "--.", 8: "....", 9: "..", 0: "-----", a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.", g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..", m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.", s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-", y: "-.--", z: "--.."};
         let a;
         if(input < 1 || input > 9999){
-            document.getElementById('antwoordMorse').innerHTML = "Voer een getal tussen de 0 en 9999 in...";
+            document.getElementById('antwoordMorse').innerHTML = "Voer een word of een getal in!";
         }else{
             for(let key in morsNumList){
                 a = Math.floor(input / morsNumList[key]);
