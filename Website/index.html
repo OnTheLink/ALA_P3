@@ -16,7 +16,7 @@
             <article>
                 <img id="news" onmouseover="this.src='content/media/pictures/Logo_Lit.png'" onmouseout="this.src='content/media/pictures/Logo_unLit.png'" width="45" src="content/media/pictures/Logo_unLit.png">
             </article>
-            <section>
+            <section id="navBar">
                 <a href="About us.html">About us</a>
                 <a href="content/reveal.js-master/index.html">Presentatie</a>
                 <a href="#Twee">Simpel Rekenen</a>
@@ -27,148 +27,157 @@
             </section>
         </header>
         <main>
-            <div id="Een">
-                <section id="grid-container">
-                    <a href="#Drie"><img src="content/media/pictures/simpel.png" alt="simpelrekenen"></a>
-                    <a href="#Vier"><img src="content/media/pictures/Eenvoudige.png" alt="reeksen"></a>
-                    <a href="#Vijf"><img src="content/media/pictures/complex.png" alt="complex"></a>
-                    <a href="#Zes"><img src="content/media/pictures/Omrekenen.png" alt="omrekenen"></a>
+            <article id="Een">
+                <summary id="grid-container">
+                    <a href="#Twee"><img src="content/media/pictures/simpel.png" alt="simpelrekenen"></a>
+                    <a href="#Drie"><img src="content/media/pictures/Eenvoudige.png" alt="reeksen"></a>
+                    <a href="#Vier"><img src="content/media/pictures/complex.png" alt="complex"></a>
+                    <a href="#Vijf"><img src="content/media/pictures/Omrekenen.png" alt="omrekenen"></a>
+                </summary>
+            </article>
+            <article id="Twee">
+                <h1 style="padding-top:80px;">Simpel Rekenen</h1>
+                <section>
+                    <input id="inputPlusOne" type='number' value="0"> +
+                    <input id="inputPlusTwo" type='number' value="0">
+                    <button id="calcPlusBtn">Toon antwoord</button>
+                    <span id="antwoordPlus"></span>
+
+                    <input id="inputMinOne" type='number' value="0"> -
+                    <input id="inputMinTwo" type='number' value="0">
+                    <button id="calcMinBtn">Toon antwoord</button>
+                    <span id="antwoordMin"></span>
+
+                    <input id="inputDivideOne" type='number' value="0"> /
+                    <input id="inputDivideTwo" type='number' value="0">
+                    <button id="calcDivideBtn">Toon antwoord</button>
+                    <span id="antwoordDivide"></span>
+
+                    <input id="inputTimesOne" type='number' value="0"> *
+                    <input id="inputTimesTwo" type='number' value="0">
+                    <button id="calcTimesBtn">Toon antwoord</button>
+                    <span id="antwoordTimes"></span>
+                    
+                    <input id="inputExpoOne" type='number' value="0"> **
+                    <input id="inputExpoTwo" type='number' value="0">
+                    <button id="calcExpoBtn">Toon antwoord</button>
+                    <span id="antwoordExpo"></span>
+
+                    <input id="inputPercentOne" type='number' value="0"> %
+                    <input id="inputPercentTwo" type='number' value="0">
+                    <button id="calcPercentBtn">Toon antwoord</button>
+                    <span id="antwoordPercent"></span>
+
+                    <input id="inputRestOne" type='number' value="0"> --
+                    <input id="inputRestTwo" type='number' value="0">
+                    <button id="calcRestBtn">Toon antwoord</button>
+                    <span id="antwoordRest"></span>
+
+                    <input id="inputOddOne" type='number' value="0"> O/E
+                    <button id="calcOddBtn">Toon antwoord</button>
+                    <span id="antwoordOdd"></span>
                 </section>
-            </div>
-            <div>
-                <h1>Simpel Rekenen</h1>
-            </div>
-            <div id="Twee">
-                <input id="inputPlusOne" type='number' value="0"> +
-                <input id="inputPlusTwo" type='number' value="0">
-                <span id="antwoordPlus"></span>
-                <button id="calcPlusBtn">Toon antwoord</button>
-                <br>
+            </article>
+            <article id="Drie">
+                <h1 style="padding-top:80px;">Simpele Sets</h1>
+                <section>
+                    <input id="inputTableOne" type='number' value="0"> *
+                    <input id="inputTableTwo" type='number' value="0">
+                    <button id="SetTableBtn">Toon antwoord</button>
+                    <span id="antwoordTable"></span>
 
-                <input id="inputMinOne" type='number' value="0"> -
-                <input id="inputMinTwo" type='number' value="0">
-                <span id="antwoordMin"></span>
-                <button id="calcMinBtn">Toon antwoord</button>
-                <br>
+                    <summary>
+                        <br><p>Grondgetal</p><br>
+                        <input id="inputPowersOne" type='number' value="0">
+                    </summary>
+                    <div></div>
+                    <summary>
+                        <br><p>Exponent</p><br>
+                        <input id="inputPowersTwo" type='number' value="0">
+                    </summary>
+                    <summary>
+                        <br><br><br>
+                        <button id="SetPowersBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordPowers"></span>
 
-                <input id="inputDivideOne" type='number' value="0"> /
-                <input id="inputDivideTwo" type='number' value="0">
-                <span id="antwoordDivide"></span>
-                <button id="calcDivideBtn">Toon antwoord</button>
-                <br>
+                    <summary>
+                        <br><br><p>Maximale Breuk</p><br>
+                        <input id="inputFractionsOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="SetFractionsBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordFractions"></span>
 
-                <input id="inputTimesOne" type='number' value="0"> *
-                <input id="inputTimesTwo" type='number' value="0">
-                <span id="antwoordTimes"></span>
-                <button id="calcTimesBtn">Toon antwoord</button>
-                <br>
-                
-                <input id="inputExpoOne" type='number' value="0"> **
-                <input id="inputExpoTwo" type='number' value="0">
-                <span id="antwoordExpo"></span>
-                <button id="calcExpoBtn">Toon antwoord</button>
-                <br>
+                    <summary>
+                        <br><br><p>Maximale Kwadraat</p><br>
+                        <input id="inputSquaresOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="SetSquaresBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordSquares"></span>
+                    <div class="spacekeeper"></div>
+                </section>
+            </article>
+            <article id="Vier">
+                <h1 style="padding-top:80px;">Complex Rekenen</h1>
+                <section>
+                    <summary>
+                        <br><br><p>Fibonacci getallen tot</p><br>
+                        <input id="inputFibonacciOne" type='number' value="0">
+                    </summary>
+                    <button id="PlexFibonacciBtn">Toon antwoord</button>
+                    <span id="antwoordFibonacci"></span>
 
-                <input id="inputPercentOne" type='number' value="0"> %
-                <input id="inputPercentTwo" type='number' value="0">
-                <span id="antwoordPercent"></span>
-                <button id="calcPercentBtn">Toon antwoord</button>
-                <br>
+                    <input id="inputPrimeOne" type='number' value="0">Prime
+                    <button id="PlexPrimeBtn">Toon antwoord</button>
+                    <span id="antwoordPrime"></span>
 
-                <input id="inputRestOne" type='number' value="0"> --
-                <input id="inputRestTwo" type='number' value="0">
-                <span id="antwoordRest"></span>
-                <button id="calcRestBtn">Toon antwoord</button>
-                <br>
-                
-                <input id="inputOddOne" type='number' value="0"> O/E
-                <span id="antwoordOdd"></span>
-                <button id="calcOddBtn">Toon antwoord</button>
-                <br>
-            </div>
-            <div>
-                <h1>Simpele Sets</h1>
-            </div>
-            <div id="Drie">
-                <input id="inputTableOne" type='number' value="0"> *
-                <input id="inputTableTwo" type='number' value="0">
-                <span id="antwoordTable"></span>
-                <button id="SetTableBtn">Toon antwoord</button>
-                <br>
+                    <input id="inputCollatzOne" type='number' value="0">Collatz
+                    <button id="PlexCollatzBtn">Toon antwoord</button>
+                    <span id="antwoordCollatz"></span>
 
-                <input id="inputPowersOne" type='number' value="0">Grondgetal<br>
-                <input id="inputPowersTwo" type='number' value="0">Exponent<br>
-                <span id="antwoordPowers"></span>
-                <button id="SetPowersBtn">Toon antwoord</button>
-                <br>
+                    <input id="inputPerfectOne" type='number' value="0">Perfect Number
+                    <button id="PlexPerfectBtn">Toon antwoord</button>
+                    <span id="antwoordPerfect"></span>
+                </section>
+            </article>
+            <article id="Vijf">
+                <h1 style="padding-top:80px;">Omrekenen</h1>
+                <section>
+                    <input id="inputDeciOne" type='number' value="0">
+                    <select name="dropDeciOne_drop" id="dropDeciOne">
+                        <option value="decimal">Decimal</option>
+                        <option value="binary" selected>Binary</option>
+                    </select> >> 
+                    <select name="dropDeciTwo_drop" id="dropDeciTwo">
+                        <option value="decimal" selected>Decimal</option>
+                        <option value="binary">Binary</option>
+                    </select>
+                    <button id="umDeciBtn">Toon antwoord</button>
+                    <span id="antwoordDeci"></span>
 
-                <input id="inputFractionsOne" type='number' value="0">Maximale Breuk
-                <span id="antwoordFractions"></span>
-                <button id="SetFractionsBtn">Toon antwoord</button>
-                <br>
+                    <input id="inputFactoOne" type='number' value="0">Factorizer
+                    <button id="umFactoBtn">Toon antwoord</button>
+                    <span id="antwoordFacto"></span>
 
-                <input id="inputSquaresOne" type='number' value="0">Maximale Kwadraat
-                <span id="antwoordSquares"></span>
-                <button id="SetSquaresBtn">Toon antwoord</button>
-                <br>
-            </div>
-            <div>
-                <h1>Complex Rekenen</h1>
-            </div>
-            <div id="Vier">
-                <input id="inputFibonacciOne" type='number' value="0">Fibonacci getallen tot
-                <span id="antwoordFibonacci"></span>
-                <button id="PlexFibonacciBtn">Toon antwoord</button>
-                <br>
+                    <input id="inputRomanOne" type='number' value="0">Romanizer
+                    <button id="umRomanBtn">Toon antwoord</button>
+                    <span id="antwoordRoman"></span>
 
-                <input id="inputPrimeOne" type='number' value="0">Prime
-                <span id="antwoordPrime"></span>
-                <button id="PlexPrimeBtn">Toon antwoord</button>
-                <br>
-
-                <input id="inputCollatzOne" type='number' value="0">Collatz
-                <span id="antwoordCollatz"></span>
-                <button id="PlexCollatzBtn">Toon antwoord</button>
-                <br>
-
-                <input id="inputPerfectOne" type='number' value="0">Perfect Number
-                <span id="antwoordPerfect"></span>
-                <button id="PlexPerfectBtn">Toon antwoord</button>
-                <br>
-            </div>
-            <div>
-                <h1>Omrekenen</h1>
-            </div>
-            <div id="Vijf">
-                <input id="inputDeciOne" type='number' value="0">
-                <select name="dropDeciOne_drop" id="dropDeciOne">
-                    <option value="decimal">Decimal</option>
-                    <option value="binary" selected>Binary</option>
-                </select> >> 
-                <select name="dropDeciTwo_drop" id="dropDeciTwo">
-                    <option value="decimal" selected>Decimal</option>
-                    <option value="binary">Binary</option>
-                </select>
-                <span id="antwoordDeci"></span>
-                <button id="umDeciBtn">Toon antwoord</button>
-                <br>
-
-                <input id="inputFactoOne" type='number' value="0">Factorizer
-                <span id="antwoordFacto"></span>
-                <button id="umFactoBtn">Toon antwoord</button>
-                <br>
-
-                <input id="inputRomanOne" type='number' value="0">Romanizer
-                <span id="antwoordRoman"></span>
-                <button id="umRomanBtn">Toon antwoord</button>
-                <br>
-
-                <input id="inputMorseOne" type='text' value="0">Morsenizer
-                <span id="antwoordMorse"></span>
-                <button id="umMorseBtn">Toon antwoord</button>
-
-
-            </div>
+                    <input id="inputMorseOne" type='text' value="0">Morsenizer
+                    <button id="umMorseBtn">Toon antwoord</button>
+                    <span id="antwoordMorse"></span>
+                </section>
+            </article>
         </main>
         <footer>
             <h6><strong>De RekenMagiër™</strong> is een product van OnTheLink®</h6>
