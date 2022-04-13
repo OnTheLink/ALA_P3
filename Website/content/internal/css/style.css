@@ -83,6 +83,7 @@ footer {
 #Een, #Twee, #Drie, #Vier, #Vijf, #Zes {
     width: 100%;
     height: 100vh;
+    grid-area: center;
 }
 
 #Drie, #Vier, #Vijf, #Zes {
@@ -107,6 +108,40 @@ footer {
     height: 250px;
 }
 
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    grid-auto-flow: rows;
+    width: 100px;
+    margin-left: 47%;
+}
+
+#navBar {
+    display: block;
+    width: auto;
+    margin-left: 0;
+}
+
+input {
+    width: 250px;
+    height: 55px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+button {
+    width: 225px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.marginBottom {
+    margin-bottom: 50px;
+}
 
 @media screen and (max-width: 480px) {
 
