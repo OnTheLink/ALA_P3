@@ -17,3 +17,84 @@
 ul{
    list-style-type: none;
 }
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #CCD5FF;
+}
+
+header {
+    /*background-color: black;*/
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: #7CC6FE;
+    align-items: center;
+}
+
+header > article {
+    flex: 5;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+header > article > img {
+    width: 100px;
+}
+
+a {
+	text-decoration: none;
+    color: black;
+    font-size: larger;
+    margin-left: 50px;
+    position: relative;
+    right: 50px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+a:hover {
+	color: purple;
+}
+
+section > article > p {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+}
+
+p {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+footer > p {
+    font-size: 1rem;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+footer > h6 {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 40px 0 0 0;
+    background-color: #7CC6FE;;
+}
