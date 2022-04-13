@@ -3,24 +3,29 @@
 *{
     margin: 0;
     padding: 0;
-    text-align: center;
+    scroll-behavior: smooth;
 }
+
 #ausec{
     margin-top: 20vh;
     height: 15vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    text-align: center;
 }
+
 .foto {
     height: 40vh;
 }
+
 ul{
    list-style-type: none;
 }
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+
+#navBar {
+    display: block;
+    width: auto;
+    margin-left: 0;
 }
 
 body {

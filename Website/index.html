@@ -9,12 +9,12 @@
         <meta name="keywords" content="NULL, NULL, NULL, NULL, NULL">
         <link rel="stylesheet" type="text/css" href="content/internal/css/style.css">
         <link rel="shortcut icon" type="image/png" href="content/media/pictures/Logo_Favicon.png"/>
-        <title>HOME || RekenMagiër</title>
+        <title>HOME || MathMate</title>
     </head>
     <body>
         <header>
             <article>
-                <img id="news" onmouseover="this.src='content/media/pictures/Logo_Lit.png'" onmouseout="this.src='content/media/pictures/Logo_unLit.png'" width="45" src="content/media/pictures/Logo_unLit.png">
+                <img onmouseover="this.src='content/media/pictures/Logo_Lit.png'" onmouseout="this.src='content/media/pictures/Logo_unLit.png'" width="45" src="content/media/pictures/Logo_unLit.png">
             </article>
             <section id="navBar">
                 <a href="About us.html">About us</a>
@@ -74,6 +74,7 @@
                     <span id="antwoordRest"></span>
 
                     <input id="inputOddOne" type='number' value="0"> O/E
+                    <div class="spacekeeper"></div>
                     <button id="calcOddBtn">Toon antwoord</button>
                     <span id="antwoordOdd"></span>
                 </section>
@@ -99,7 +100,7 @@
                         <br><br><br>
                         <button id="SetPowersBtn">Toon antwoord</button>
                     </summary>
-                    <span id="antwoordPowers"></span>
+                    <span id="antwoordPowers" class="middle"></span>
 
                     <summary>
                         <br><br><p>Maximale Breuk</p><br>
@@ -111,7 +112,7 @@
                         <br><br><br><br>
                         <button id="SetFractionsBtn">Toon antwoord</button>
                     </summary>
-                    <span id="antwoordFractions"></span>
+                    <span id="antwoordFractions" class="middleBig"></span>
 
                     <summary>
                         <br><br><p>Maximale Kwadraat</p><br>
@@ -123,7 +124,7 @@
                         <br><br><br><br>
                         <button id="SetSquaresBtn">Toon antwoord</button>
                     </summary>
-                    <span id="antwoordSquares"></span>
+                    <span id="antwoordSquares" class="middleBig"></span>
                     <div class="spacekeeper"></div>
                 </section>
             </article>
@@ -134,30 +135,62 @@
                         <br><br><p>Fibonacci getallen tot</p><br>
                         <input id="inputFibonacciOne" type='number' value="0">
                     </summary>
-                    <button id="PlexFibonacciBtn">Toon antwoord</button>
-                    <span id="antwoordFibonacci"></span>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="PlexFibonacciBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordFibonacci" class="middleBig"></span>
 
-                    <input id="inputPrimeOne" type='number' value="0">Prime
-                    <button id="PlexPrimeBtn">Toon antwoord</button>
-                    <span id="antwoordPrime"></span>
+                    <summary>
+                        <br><br><p>Prime</p><br>
+                        <input id="inputPrimeOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="PlexPrimeBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordPrime" class="middleBig"></span>
 
-                    <input id="inputCollatzOne" type='number' value="0">Collatz
-                    <button id="PlexCollatzBtn">Toon antwoord</button>
-                    <span id="antwoordCollatz"></span>
+                    <summary>
+                        <br><br><p>Collatz</p><br>
+                        <input id="inputPrimeOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="PlexCollatzBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordCollatz" class="middleBig"></span>
 
-                    <input id="inputPerfectOne" type='number' value="0">Perfect Number
-                    <button id="PlexPerfectBtn">Toon antwoord</button>
-                    <span id="antwoordPerfect"></span>
+                    <summary>
+                        <br><br><p>Perfect Number</p><br>
+                        <input id="inputPerfectOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="PlexPerfectBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordPerfect" class="middleBig"></span>
                 </section>
             </article>
             <article id="Vijf">
                 <h1 style="padding-top:80px;">Omrekenen</h1>
                 <section>
-                    <input id="inputDeciOne" type='number' value="0">
-                    <select name="dropDeciOne_drop" id="dropDeciOne">
-                        <option value="decimal">Decimal</option>
-                        <option value="binary" selected>Binary</option>
-                    </select> >> 
+                    <summary>
+                        <input id="inputDeciOne" type='number' value="0">
+                        <select name="dropDeciOne_drop" id="dropDeciOne">
+                            <option value="decimal">Decimal</option>
+                            <option value="binary" selected>Binary</option>
+                        </select>
+                    </summary>
+                    <p>>></p> 
                     <select name="dropDeciTwo_drop" id="dropDeciTwo">
                         <option value="decimal" selected>Decimal</option>
                         <option value="binary">Binary</option>
@@ -165,22 +198,46 @@
                     <button id="umDeciBtn">Toon antwoord</button>
                     <span id="antwoordDeci"></span>
 
-                    <input id="inputFactoOne" type='number' value="0">Factorizer
-                    <button id="umFactoBtn">Toon antwoord</button>
-                    <span id="antwoordFacto"></span>
+                    <summary>
+                        <br><br><p>Factorizer</p><br>
+                        <input id="inputFactoOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="umFactoBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordFacto" class="middleBig"></span>
 
-                    <input id="inputRomanOne" type='number' value="0">Romanizer
-                    <button id="umRomanBtn">Toon antwoord</button>
-                    <span id="antwoordRoman"></span>
+                    <summary>
+                        <br><br><p>Romanizer</p><br>
+                        <input id="inputRomanOne" type='number' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="umRomanBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordRoman" class="middleBig"></span>
 
-                    <input id="inputMorseOne" type='text' value="0">Morsenizer
-                    <button id="umMorseBtn">Toon antwoord</button>
-                    <span id="antwoordMorse"></span>
+                    <summary>
+                        <br><br><p>Morsenizer</p><br>
+                        <input id="inputMorseOne" type='text' value="0">
+                    </summary>
+                    <div class="spacekeeper"></div>
+                    <div class="spacekeeper"></div>
+                    <summary>
+                        <br><br><br><br>
+                        <button id="umMorseBtn">Toon antwoord</button>
+                    </summary>
+                    <span id="antwoordMorse" class="middleBig"></span>
                 </section>
             </article>
         </main>
         <footer>
-            <h6><strong>De RekenMagiër™</strong> is een product van OnTheLink®</h6>
+            <h6><strong>MathMate™</strong> is een product van OnTheLink®</h6>
             <p>Copyright © 2022 OnTheLink LLC - Alle rechten voorbehouden</p>
         </footer>
     </body>

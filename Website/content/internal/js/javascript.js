@@ -93,7 +93,7 @@ function calcOdd() {
     if(inputOne % 2 == 0) {
         document.getElementById('antwoordOdd').innerHTML = "Even";
     }else{
-        document.getElementById('antwoordOdd').innerHTML = "Odd";
+        document.getElementById('antwoordOdd').innerHTML = "Oneven";
     }
 }
 
