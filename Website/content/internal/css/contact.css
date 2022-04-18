@@ -105,4 +105,5 @@ input[type=text], select, textarea {
     border-radius: 5px;
     background-color: #CCD5FF;
     padding: 20px;
+    margin-top: 30px;
   }
